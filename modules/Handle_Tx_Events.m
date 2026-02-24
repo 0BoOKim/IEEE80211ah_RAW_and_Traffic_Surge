@@ -1,4 +1,4 @@
-function SimState = Handle_Tx_Events(SimState, SimParams)
+function Handle_Tx_Events(SimState, SimParams)
 
     i = SimState.Time;
     STATE_CS = 2;

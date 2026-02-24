@@ -2,6 +2,9 @@ function SimState = Init_Network(SimParams)
 
     rng(SimParams.PNRG_Seed1);
 
+    % Use Handle Class instead of struct
+    SimState = SimulationState();
+
     N_AP = SimParams.N_AP;
     N_Node = SimParams.N_Node;
     N_bkSTA = SimParams.N_bkSTA;
@@ -97,7 +100,7 @@ function SimState = Init_Network(SimParams)
     SimState.Node = Node;
 
     % Channel State
-    SimState.tx_state = zeros(SimParams.N_slot, N_Node); % This might be large memory allocation
+    SimState.tx_state = zeros(SimParams.N_slot, N_Node);
     SimState.tx_status = zeros(N_Node, 5) -1;
     SimState.n_txnode = zeros(1, N_Node);
 

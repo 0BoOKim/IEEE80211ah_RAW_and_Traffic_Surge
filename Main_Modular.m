@@ -18,16 +18,16 @@ tic;
 while SimState.Time <= SimParams.N_slot
 
     % Manage RAW Slot Boundaries and Assignments
-    SimState = Manage_RAW(SimState, SimParams);
+    Manage_RAW(SimState, SimParams);
 
     % Handle MAC Access (Backoff, Start Transmission)
-    SimState = MAC_Access(SimState, SimParams);
+    MAC_Access(SimState, SimParams);
 
     % Handle Transmission Events (End of TX, ACKs, Timers)
-    SimState = Handle_Tx_Events(SimState, SimParams);
+    Handle_Tx_Events(SimState, SimParams);
 
     % Generate Traffic
-    SimState = Generate_Traffic(SimState, SimParams);
+    Generate_Traffic(SimState, SimParams);
 
     % Advance Time
     SimState.Time = SimState.Time + 1;

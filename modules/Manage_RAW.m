@@ -1,4 +1,4 @@
-function SimState = Manage_RAW(SimState, SimParams)
+function Manage_RAW(SimState, SimParams)
 
     i = SimState.Time;
 

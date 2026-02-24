@@ -1,4 +1,4 @@
-function SimState = Generate_Traffic(SimState, SimParams)
+function Generate_Traffic(SimState, SimParams)
 
     i = SimState.Time;
 

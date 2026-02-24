@@ -1,4 +1,4 @@
-function SimState = MAC_Access(SimState, SimParams)
+function MAC_Access(SimState, SimParams)
 
     i = SimState.Time;
 
